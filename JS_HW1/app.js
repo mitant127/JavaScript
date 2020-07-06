@@ -1,16 +1,15 @@
 "use strict";
 
-alert(+"2,5")
+alert(+"2,5");
 
 //Task 1
 let Tc = prompt('Enter temperature in celsius: ');
 let Tf = (9 / 5) * Tc + 32;
-alert(Tf)
+alert(Tf);
 
 //Task 2
-let admin;
 let name = "Василий";
-admin = name;
+let admin = name;
 console.log(admin);
 
 //Task 2
@@ -28,8 +27,8 @@ console.log(10 + 10 + +"10");
 20 + 10 = 30*/
 
 console.log(10 / -"");
-/* -"" = 0
-10 / 0 = -Infinity */
+/* -"" = -0
+10 / -0 = -Infinity */
 
 console.log(10 / +"2,5");
 /* +"2,5" = NaN
