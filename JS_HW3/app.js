@@ -10,11 +10,11 @@
 //10 – четное число
 
 for (let i = 0; i <= 10; i++){
-    if (i == 0){console.log(i + " – это ноль")}
-    else if (i % 2 == 0){
+    if (i == 0){
+        console.log(i + " – это ноль");
+    } else if (i % 2 == 0){
         console.log(i + " – четное число");
-    }
-    else if (i % 2 != 0){
+    } else if (i % 2 != 0){
         console.log(i + " – нечетное число");
     }
 }
@@ -106,9 +106,10 @@ const products = [
 //метод filter https://mzl.la/2qROQkT
 
 for (let i = 0; i < products.length; i++){
-    if ('photos' in products[i])
+    if ('photos' in products[i]) {
         if (products[i].photos.length > 0){
             console.log(products[i])
+        }
     }
 }
 //const result = products.filter(prod => prod."photos" > 0);
@@ -119,9 +120,9 @@ for (let i = 0; i < products.length; i++){
 //здесь https://youtu.be/O2pusOp0gC0
 
 products.sort(function(a, b){
-    return a.price-b.price
+    return a.price-b.price;
 })
-console.log(products)
+console.log(products);
 
 //Task 6  (По желанию, т.к. такая особенность практически не используется) 
 //Вывести с помощью цикла for числа от 0 до 9, НЕ используя тело цикла. 
@@ -129,7 +130,7 @@ console.log(products)
 
 //for(…){/* здесь пусто */}
 
-for (let i = 0; i < 10; (console.log(i), i++)){}
+for (let i = 0; i < 10; console.log(i), i++){}
 
 //Помните, что в первом, втором и третьем раздела цикла можно не только писать 
 //условия, или увеличивать счетчик например на 1, допустимы любые выражения, 
