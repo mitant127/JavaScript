@@ -65,7 +65,7 @@ function hideMoreText(card) {
     
     // 5.1 внутри .product находим элемент с классом .desc и удаляем его
     
-    
+    //    card.classList.remove("desc");
     
     // 5.2 кнопке, которая внутри .product ставим текст "Подробнее"
     
@@ -92,16 +92,14 @@ function showMoreText(card) {
     
     // 6.2 внутри .product есть .productName, после него вставляем div.desc и текстом из переменной из п. 6.1
     
-    
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//"не получилось создать элемент внутри div-а в котором произошло нажатие кнопки"    
-    +++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-//    let product = card.wrap.querySelector('.productName').parentNode;
-////    console.log(product);
-//    let dive = document.createElement('div');
-//    product.insertAfter('productName' ,dive);
-//    dive.innerText = descText;
+    let product = card.wrap.querySelector('.productName').parentNode;
+//    console.log(product);
+    let childElem = product.querySelectorAll("button");
+//     console.log(childElem);
+    let dive = document.createElement('div');
+    dive.className = "desc";
+    product.insertBefore(dive, childElem[0]);
+    dive.innerText = descText;
     
     // 6.3 внутри .product у кнопки текст ставим "Отмена"
     
