@@ -2,36 +2,33 @@ document.head.insertAdjacentHTML("afterbegin", '<link rel="stylesheet" href="htt
 
 // Получаем элемент со всеми слайдами
 let slider = document.querySelector("div.slider");
+let frame = document.querySelector("div.frame");
 
 // Создаем левую стрелку
 let leftArrow = document.createElement('i');
 leftArrow.classList.add('fas', 'fa-chevron-circle-left', 'slider-leftArrow');
-slider.insertAdjacentElement("beforeend", leftArrow);
+frame.insertAdjacentElement("beforeend", leftArrow);
 
 // Создаем правую стрелку
 let rightArrow = document.createElement('i');
 rightArrow.classList.add('fas', 'fa-chevron-circle-right', 'slider-rightArrow');
-slider.insertAdjacentElement("beforeend", rightArrow);
+frame.insertAdjacentElement("beforeend", rightArrow);
 
 // Получаем видимую часть слайда
 let viewport = document.getElementById("viewport").offsetWidth;
-// Получаем кнопку вперёд
-//let btnNext = document.getElementById("next");
-// Получаем кнопку назад
-//let btnPrev = document.getElementById("prev");
 
 // Получаем элементы показа слайда
 let viewSliders = document.querySelectorAll(".viewSlide");
 // Объявляем переменную номера слайда
 let viewSlide = 0;
  
-// Назначаем цвет индикатор слайда зелёный
-viewSliders[0].style.backgroundColor = "green";
+// Назначаем цвет индикатор слайда
+viewSliders[0].style.backgroundColor = "#eeeeee";
  
 // Обработка клика на кнопку вперёд
 rightArrow.addEventListener("click", function () {
-    // Делаем индикатор слайда красный
-    viewSliders[viewSlide].style.backgroundColor = "red";
+    // Назначаем цвет индикатору слайда
+    viewSliders[viewSlide].style.backgroundColor = "#bbbbbb";
     // Условие, если номер слайда меньше четырёх
     if (viewSlide < 2) { // Если верно то
         // Увеличиваем номер слайда на один
@@ -40,16 +37,16 @@ rightArrow.addEventListener("click", function () {
         // Номер слайда равен нулю
         viewSlide = 0;
     }
-    // Закрашиваем индикатор слайда в зелёный
-    viewSliders[viewSlide].style.backgroundColor = "green";
+    // Закрашиваем индикатор слайда
+    viewSliders[viewSlide].style.backgroundColor = "#eeeeee";
     // Меняем позицию всего слайда
     slider.style.left = -viewSlide * viewport + "px";
 });
  
 // Обработка клика на кнопку назад
 leftArrow.addEventListener("click", function () {
-    // Делаем индикатор слайда красный
-    viewSliders[viewSlide].style.backgroundColor = "red";
+    // Назначаем цвет индикатора слайда
+    viewSliders[viewSlide].style.backgroundColor = "#bbbbbb";
     // Условие, если номер слайда больше нуля
     if (viewSlide > 0) { // Если верно то
         // Уменьшаем номер слайда
@@ -58,8 +55,8 @@ leftArrow.addEventListener("click", function () {
         // Номер слайда равен четырём
         viewSlide = 2; 
     }
-    // Закрашиваем индикатор слайда в зелёный
-    viewSliders[viewSlide].style.backgroundColor = "green";
+    // Закрашиваем индикатор слайда
+    viewSliders[viewSlide].style.backgroundColor = "#eeeeee";
     // Меняем позицию всего слайда
     slider.style.left = -viewSlide * viewport + "px";
 });

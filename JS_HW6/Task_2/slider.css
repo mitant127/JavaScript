@@ -8,6 +8,7 @@ body {
     width: 720px;
     height: 480px;
     overflow: hidden;
+    border-radius: 50px;
 }
 
 .slider {
@@ -22,43 +23,50 @@ body {
 }
 
 .slide {
-/*    width: 100%;*/
+    /*    width: 100%;*/
     height: 480px;
 }
 
 .slide img {
-/*    width: 100%;*/
+    /*    width: 100%;*/
     height: 480px;
     object-fit: cover;
     object-position: 0;
 }
 
 #viewSlider {
+    z-index: 3;
     width: calc(30px * 3);
     display: flex;
     justify-content: space-between;
+    padding-left: 40%;
+    /*    margin-top: -40px;*/
+    margin-top: 10px;
 }
 
 .viewSlide {
     width: 20px;
     height: 20px;
-    background-color: red;
+    color: #cccccc;
+    border-radius: 50%;
 }
 
-.slider-leftArrow, .slider-rightArrow {
-    
-  position: absolute;
-  top: 47%;
-  z-index: 3;
-  color: #bbbbbb;
-  cursor: pointer;
-  font-size: 50px;
+.slider-leftArrow,
+.slider-rightArrow {
+
+    position: absolute;
+    top: 40%;
+    z-index: 3;
+    color: #bbbbbb;
+    cursor: pointer;
+    font-size: 50px;
 }
 
 .slider-leftArrow {
-  padding-left: 50px;
+    margin-left: 15px;
 }
 
 .slider-rightArrow {
-  padding-right: 15px;
+    margin-left: 655px;
+    /*  margin-right: 150px;*/
 }
