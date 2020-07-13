@@ -1,0 +1,24 @@
+html {
+    background: #cfcfcf;
+}
+
+table {
+    border-collapse: collapse;
+    background: rgb(255, 255, 255);
+    border: 2px solid black;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.frame {
+    border: none;
+}
+
+.black {
+    background: black;
+}
